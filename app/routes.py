@@ -126,7 +126,7 @@ def add_product():
     db.session.commit()
 
     if quantity <= 5:
-        admin_email = "ace.tumandao7@gmail.com"
+        admin_email = "dengpalajorin@gmail.com"
         body = f"""StockHub Alert: New product "{name}" added with low stock ({quantity} left).\nExecuted by: {current_user.full_name} ({current_user.role})"""
         send_email_notification(f"Low Stock Alert: {name}", admin_email, body)
 
@@ -164,7 +164,7 @@ def edit_product(id):
     db.session.commit()
 
     if quantity <= 5:
-        admin_email = "ace.tumandao7@gmail.com"
+        admin_email = "dengpalajorin@gmail.com"
         body = f"""StockHub Warning: Product "{name}" updated. Critical stock level: {quantity}.\nExecuted by: {current_user.full_name} ({current_user.role})"""
         send_email_notification(f"Critical Stock Warning: {name}", admin_email, body)
 
@@ -293,7 +293,7 @@ def stock_in():
     db.session.add(txn)
     db.session.commit()
 
-    admin_email = "ace.tumandao7@gmail.com"
+    admin_email = "dengpalajorin@gmail.com"
     body = f"""[STOCKHUB TRANSACTION - STOCK IN]
 Product: {product.name}
 Quantity Added: {quantity}
@@ -331,7 +331,7 @@ def stock_out():
         db.session.add(txn)
         db.session.commit()
 
-        admin_email = "ace.tumandao7@gmail.com"
+        admin_email = "dengpalajorin@gmail.com"
         body = f"""[STOCKHUB TRANSACTION - STOCK OUT]
 Product: {product.name}
 Quantity Deducted: {quantity}
