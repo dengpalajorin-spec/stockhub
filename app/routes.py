@@ -9,6 +9,7 @@ from flask_mail import Message
 from flask import Blueprint
 
 
+bp = Blueprint('main', _name_)
 main = Blueprint('main', __name__)
 
 def send_email_notification(subject, recipient, body):
@@ -410,5 +411,4 @@ def reports():
                            total_stock_in_txns=total_stock_in_txns,
                            total_stock_out_txns=total_stock_out_txns)
 
-                           
-bp = Blueprint('main', __name__)
+
