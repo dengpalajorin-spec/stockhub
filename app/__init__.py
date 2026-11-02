@@ -28,8 +28,8 @@ def create_app():
     def load_user(user_id):
         return User.query.get(int(user_id))
 
-    from app.routes import bp
-    app.register_blueprint(bp)
+    from app.routes import main
+    app.register_blueprint(main)
 
     return app
 

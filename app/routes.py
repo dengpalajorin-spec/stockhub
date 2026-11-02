@@ -9,7 +9,7 @@ from flask_mail import Message
 from flask import Blueprint
 
 
-bp = Blueprint('main', __name__)
+main = Blueprint('main', __name__)
 
 
 def send_email_notification(subject, recipient, body):
