@@ -6,6 +6,8 @@ from app.models import User, Product, Category, Supplier, Transaction
 from datetime import date
 from sqlalchemy import func
 from flask_mail import Message
+from flask import Blueprint
+
 
 main = Blueprint('main', __name__)
 
@@ -407,3 +409,6 @@ def reports():
                            total_units_in_stock=total_units_in_stock,
                            total_stock_in_txns=total_stock_in_txns,
                            total_stock_out_txns=total_stock_out_txns)
+
+                           
+bp = Blueprint('main', __name__)
