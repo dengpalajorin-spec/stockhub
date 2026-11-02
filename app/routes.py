@@ -10,7 +10,7 @@ from flask import Blueprint
 
 
 bp = Blueprint('main', _name_)
-main = Blueprint('main', __name__)
+
 
 def send_email_notification(subject, recipient, body):
     try:
